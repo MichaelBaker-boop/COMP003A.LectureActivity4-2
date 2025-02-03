@@ -8,7 +8,23 @@ namespace COMP003A.LectureActivity4_2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            // Greet the user
+            GreetUser();
+
+            //Input two numbers and calculate their sum
+            Console.Write("Enter the first number: ");
+            int num1 = int.Parse(Console.ReadLine()); // Parse user input to an integer
+
+            Console.Write("Enter the second number: ");
+            int num2 = int.Parse(Console.ReadLine()); // Parse user input to an integer
+
+            int sum = CalculateSum(num1, num2); // Call the method and store the results
+            Console.WriteLine($"The sum of {num1} and {num2} is {sum}.");
+
+            // Display the contents of an array
+            int[] numbers = { 10, 20, 30, 40, 50 }; // Initialize an array
+            Console.WriteLine("Array contents:");
+            DisplayArray(numbers); // Call the method to print the array
         }
         
         
@@ -34,6 +50,19 @@ namespace COMP003A.LectureActivity4_2
         static int CalculateSum(int num1, int num2)
         { 
             return num1 + num2; // Add the two numbers and return the result
+        }
+
+        /// <summary>
+        /// Displays the contents of an array
+        /// </summary>
+        /// <param name="numbers">Array collection of integers</param>
+        
+        static void DisplayArray(int[] numbers)
+        {
+            foreach (int num in numbers) // Loop through the array
+            {
+                Console.WriteLine(num); // Print each number
+            }
         }
     }
 
